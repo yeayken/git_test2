@@ -1,0 +1,53 @@
+2019-09-27 08:54:14,733 : WARN  : ModalContext :  : Node : MISSING Python Source : 0:1 : Node can't be executed - Node "Python Source" not available from extension "KNIME Python Integration" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.python2.nodes" is not installed)
+2019-09-30 10:16:36,266 : INFO  : Thread-47 :  : PythonKernel : Python Source : 3:1 : C:\Users\hp\knime-workspace
+2019-09-30 10:16:36,657 : WARN  : Thread-48 :  : PythonKernel : Python Source : 3:1 : fatal: not a git repository (or any of the parent directories): .git
+2019-09-30 10:16:36,741 : WARN  : Thread-48 :  : PythonKernel : Python Source : 3:1 : fatal: not a git repository (or any of the parent directories): .git
+2019-09-30 10:16:37,501 : INFO  : KNIME-Worker-14 :  : PythonSourceNodeModel : Python Source : 3:1 : The result table at port 0 contains no rows
+2019-09-30 10:16:37,501 : WARN  : KNIME-Worker-14 :  : Node : Python Source : 3:1 : Node created an empty data table.
+2019-09-30 10:16:37,501 : INFO  : KNIME-Worker-14 :  : LocalNodeExecutionJob : Python Source : 3:1 : Python Source 3:1 End execute (14 secs)
+2019-09-30 10:16:37,869 : ERROR : KNIME-Worker-15 :  : Node : Call Local Workflow (Row Based) : 3:2 : Execute failed: java.io.IOException: No "workflow.knime" file in directory "C:\Users\hp\knime-workspace\git_test"
+java.util.concurrent.ExecutionException: java.io.IOException: No "workflow.knime" file in directory "C:\Users\hp\knime-workspace\git_test"
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476)
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435)
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79)
+	at com.google.common.util.concurrent.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:143)
+	at com.google.common.cache.LocalCache$Segment.getAndRecordStats(LocalCache.java:2352)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2324)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4790)
+	at org.knime.explorer.nodes.callworkflow.local.LocalWorkflowBackend.newInstance(LocalWorkflowBackend.java:178)
+	at org.knime.explorer.nodes.callworkflow.local.CallLocalWorkflowNodeModel.newBackend(CallLocalWorkflowNodeModel.java:78)
+	at org.knime.productivity.base.callworkflow.CallWorkflowNodeModel.executeInternal(CallWorkflowNodeModel.java:179)
+	at org.knime.productivity.base.callworkflow.CallWorkflowNodeModel.access$0(CallWorkflowNodeModel.java:175)
+	at org.knime.productivity.base.callworkflow.CallWorkflowNodeModel$1.call(CallWorkflowNodeModel.java:162)
+	at org.knime.productivity.base.callworkflow.CallWorkflowNodeModel$1.call(CallWorkflowNodeModel.java:1)
+	at org.knime.core.util.ThreadPool.runInvisible(ThreadPool.java:615)
+	at org.knime.productivity.base.callworkflow.CallWorkflowNodeModel.execute(CallWorkflowNodeModel.java:159)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:733)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:567)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1192)
+	at org.knime.core.node.Node.execute(Node.java:979)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:559)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:179)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:110)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:328)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:204)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.io.IOException: No "workflow.knime" file in directory "C:\Users\hp\knime-workspace\git_test"
+	at org.knime.core.node.workflow.WorkflowLoadHelper.createTemplateLoadPersistor(WorkflowLoadHelper.java:274)
+	at org.knime.core.node.workflow.WorkflowLoadHelper.createLoadPersistor(WorkflowLoadHelper.java:246)
+	at org.knime.core.node.workflow.WorkflowManager.createLoadPersistor(WorkflowManager.java:7551)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:7591)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:7437)
+	at org.knime.explorer.nodes.callworkflow.local.LocalWorkflowBackend.loadWorkflow(LocalWorkflowBackend.java:253)
+	at org.knime.explorer.nodes.callworkflow.local.LocalWorkflowBackend.lambda$0(LocalWorkflowBackend.java:178)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4793)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	... 26 more

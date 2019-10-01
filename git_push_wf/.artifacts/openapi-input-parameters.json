@@ -1,0 +1,12 @@
+
+{
+    "type":"object",
+    "properties":{
+        "string-input-3:2":{
+            "type":"string",
+            "default":"add pull",
+            "description":"Input message",
+            "example":"add pull"
+        }
+    }
+}
